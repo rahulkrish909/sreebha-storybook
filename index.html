@@ -1,114 +1,359 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>The Unusual Wish | Sreebha Sasidharan</title>
-<meta name="description" content="Read The Unusual Wish, an illustrated children's story by Sreebha Sasidharan.">
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <meta
+    name="description"
+    content="Read The Unusual Wish by Sreebha Sasidharan, a beautiful illustrated children's story."
+  >
+
+  <title>Sreebha Storybook | The Unusual Wish</title>
+
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-<header class="site-header">
-  <a class="brand" href="#home">✨ The Unusual Wish</a>
-  <button class="menu-toggle" aria-label="Open menu" aria-expanded="false">☰</button>
-  <nav id="main-nav">
-    <a href="#home">Home</a>
-    <a href="#story">Read Story</a>
-    <a href="#about">About Author</a>
-    <a href="#contact">Contact</a>
-    <a href="#feedback">Feedback</a>
-  </nav>
-</header>
 
-<main>
-<section id="home" class="hero page-section">
-  <div class="hero-copy">
-    <p class="eyebrow">A gentle story about courage, curiosity & being yourself</p>
-    <h1>The Unusual Wish</h1>
-    <p class="subtitle">Written and illustrated with love by <strong>Sreebha Sasidharan</strong></p>
-    <p>Amy makes an unusual wish—and discovers that trying something different can help us understand ourselves in a new way.</p>
-    <div class="actions">
-      <a class="button primary" href="#story">Read the story</a>
-      <a class="button secondary" href="The_Unusual_Wish_Illustrated_Storybook.pdf" download>Download illustrated PDF</a>
+  <!-- Header -->
+  <header class="site-header">
+    <div class="header-content">
+
+      <a href="#home" class="logo">
+        📖 Sreebha Storybook
+      </a>
+
+      <nav class="navigation">
+        <a href="#home">Home</a>
+        <a href="#story">Read Story</a>
+        <a href="#about">About Author</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
     </div>
-  </div>
-  <div class="hero-art">
-    <img src="images/panel_1.jpg" alt="Illustration from The Unusual Wish">
-  </div>
-</section>
+  </header>
 
-<section id="story" class="page-section">
-  <div class="section-heading">
-    <p class="eyebrow">Online storybook</p>
-    <h2>Read The Unusual Wish</h2>
-    <p>Turn the pages below. Use the arrows or the page buttons to explore the story.</p>
-  </div>
-  <div class="reader">
-    <div class="reader-toolbar">
-      <button class="button secondary small" id="prev">← Previous</button>
-      <span id="page-count" aria-live="polite">Page 1 of 12</span>
-      <button class="button secondary small" id="next">Next →</button>
-    </div>
-    <figure class="story-page">
-      <img id="story-image" src="images/panel_1.jpg" alt="Story page 1">
-    </figure>
-    <div class="page-dots" id="page-dots" aria-label="Choose story page"></div>
-    <p class="reader-note">For the complete printable version, download the illustrated PDF.</p>
-    <a class="button primary" href="The_Unusual_Wish_Illustrated_Storybook.pdf" download>Download the PDF</a>
-  </div>
-</section>
+  <!-- Hero Section -->
+  <main>
 
-<section id="about" class="page-section split">
-  <div>
-    <p class="eyebrow">About the author</p>
-    <h2>Sreebha Sasidharan</h2>
-    <p>Sreebha Sasidharan creates warm, imaginative stories for children—stories that celebrate kindness, curiosity, friendship and the small discoveries that make growing up special.</p>
-    <p><em>The Unusual Wish</em> is a gentle reminder that being different can be a beautiful part of being ourselves.</p>
-  </div>
-  <div class="quote-card">“Sometimes, trying something different helps us understand ourselves in a new way.”</div>
-</section>
+    <section id="home" class="hero-section">
 
-<section id="contact" class="page-section">
-  <div class="section-heading">
-    <p class="eyebrow">Say hello</p>
-    <h2>Contact</h2>
-    <p>For story enquiries, collaborations or permissions, use the form below. Replace the email address in the form action with your own Formspree endpoint or connect it to your preferred form service.</p>
-  </div>
-  <form class="contact-form" action="https://formspree.io/f/your-form-id" method="POST">
-    <label>Name<input name="name" required></label>
-    <label>Email<input type="email" name="email" required></label>
-    <label>Message<textarea name="message" rows="5" required></textarea></label>
-    <button class="button primary" type="submit">Send message</button>
-  </form>
-</section>
+      <div class="hero-content">
 
-<section id="feedback" class="page-section">
-  <div class="section-heading">
-    <p class="eyebrow">Help us grow</p>
-    <h2>Feedback</h2>
-    <p>Tell us what your little readers enjoyed. This form is ready to connect to Formspree, Google Forms or another free form service.</p>
-  </div>
-  <form class="contact-form" action="https://formspree.io/f/your-form-id" method="POST">
-    <label>Your name<input name="name"></label>
-    <label>What did you think?<textarea name="feedback" rows="5" required></textarea></label>
-    <label>Rating
-      <select name="rating">
-        <option value="5">★★★★★ Wonderful</option>
-        <option value="4">★★★★☆ Lovely</option>
-        <option value="3">★★★☆☆ Good</option>
-        <option value="2">★★☆☆☆ Needs improvement</option>
-        <option value="1">★☆☆☆☆</option>
-      </select>
-    </label>
-    <button class="button primary" type="submit">Submit feedback</button>
-  </form>
-</section>
-</main>
+        <p class="welcome-text">
+          Welcome to Sreebha Storybook
+        </p>
 
-<footer>
-  <p>© 2026 Sreebha Sasidharan · The Unusual Wish</p>
-  <p>Made with stories, stars and a little imagination ✨</p>
-</footer>
-<script src="script.js"></script>
+        <h1>
+          The Unusual Wish
+        </h1>
+
+        <p class="hero-subtitle">
+          A magical illustrated children's story by
+          <strong>Sreebha Sasidharan</strong>
+        </p>
+
+        <div class="hero-buttons">
+          <a href="#story" class="primary-button">
+            📚 Read the Story
+          </a>
+
+          <a href="#contact" class="secondary-button">
+            💌 Send Feedback
+          </a>
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- Story Introduction -->
+    <section class="intro-section">
+
+      <div class="section-container">
+
+        <h2>Discover a Wonderful Story</h2>
+
+        <p>
+          Step into a world of imagination, dreams and unexpected wishes.
+          Explore the beautifully illustrated pages of
+          <strong>The Unusual Wish</strong>.
+        </p>
+
+        <p>
+          Read the story online or download the illustrated storybook.
+        </p>
+
+      </div>
+
+    </section>
+
+    <!-- Story Pages -->
+    <section id="story" class="story-section">
+
+      <div class="section-container">
+
+        <h2>📖 Read The Unusual Wish</h2>
+
+        <p class="section-description">
+          Turn the pages below and enjoy the story.
+        </p>
+
+        <div class="storybook">
+
+          <div class="story-page">
+            <img
+              src="panel_1.jpg"
+              alt="The Unusual Wish - Page 1"
+              loading="lazy"
+            >
+          </div>
+
+          <div class="story-page">
+            <img
+              src="panel_2.jpg"
+              alt="The Unusual Wish - Page 2"
+              loading="lazy"
+            >
+          </div>
+
+          <div class="story-page">
+            <img
+              src="panel_3.jpg"
+              alt="The Unusual Wish - Page 3"
+              loading="lazy"
+            >
+          </div>
+
+          <div class="story-page">
+            <img
+              src="panel_4.jpg"
+              alt="The Unusual Wish - Page 4"
+              loading="lazy"
+            >
+          </div>
+
+          <div class="story-page">
+            <img
+              src="panel_5.jpg"
+              alt="The Unusual Wish - Page 5"
+              loading="lazy"
+            >
+          </div>
+
+          <div class="story-page">
+            <img
+              src="panel_6.jpg"
+              alt="The Unusual Wish - Page 6"
+              loading="lazy"
+            >
+          </div>
+
+          <div class="story-page">
+            <img
+              src="panel_7.jpg"
+              alt="The Unusual Wish - Page 7"
+              loading="lazy"
+            >
+          </div>
+
+          <div class="story-page">
+            <img
+              src="panel_8.jpg"
+              alt="The Unusual Wish - Page 8"
+              loading="lazy"
+            >
+          </div>
+
+          <div class="story-page">
+            <img
+              src="panel_9.jpg"
+              alt="The Unusual Wish - Page 9"
+              loading="lazy"
+            >
+          </div>
+
+          <div class="story-page">
+            <img
+              src="panel_10.jpg"
+              alt="The Unusual Wish - Page 10"
+              loading="lazy"
+            >
+          </div>
+
+          <div class="story-page">
+            <img
+              src="panel_11.jpg"
+              alt="The Unusual Wish - Page 11"
+              loading="lazy"
+            >
+          </div>
+
+          <div class="story-page">
+            <img
+              src="panel_12.jpg"
+              alt="The Unusual Wish - Page 12"
+              loading="lazy"
+            >
+          </div>
+
+        </div>
+
+        <!-- PDF Download -->
+        <div class="download-box">
+
+          <h3>Download the Illustrated Storybook</h3>
+
+          <p>
+            Save the complete storybook and read it anytime.
+          </p>
+
+          <a
+            href="The-Unusual-Wish.pdf"
+            class="primary-button"
+            download
+          >
+            ⬇️ Download PDF
+          </a>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- About Author -->
+    <section id="about" class="about-section">
+
+      <div class="section-container">
+
+        <h2>✍️ About the Author</h2>
+
+        <div class="about-card">
+
+          <h3>Sreebha Sasidharan</h3>
+
+          <p>
+            Sreebha Sasidharan is a creative storyteller who enjoys
+            bringing imagination, emotions and meaningful messages
+            to children through stories.
+          </p>
+
+          <p>
+            <strong>The Unusual Wish</strong> is a story created
+            with love for young readers and families.
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- Contact and Feedback -->
+    <section id="contact" class="contact-section">
+
+      <div class="section-container">
+
+        <h2>💌 Contact & Feedback</h2>
+
+        <p class="section-description">
+          Share your thoughts about the story or send a message to the author.
+        </p>
+
+        <form
+          action="https://formspree.io/f/mbglrenr"
+          method="POST"
+          class="contact-form"
+        >
+
+          <label for="name">
+            Your Name
+          </label>
+
+          <input
+            type="text"
+            id="name"
+            name="name"
+            placeholder="Enter your name"
+            required
+          >
+
+          <label for="email">
+            Your Email
+          </label>
+
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Enter your email address"
+            required
+          >
+
+          <label for="subject">
+            Subject
+          </label>
+
+          <input
+            type="text"
+            id="subject"
+            name="subject"
+            placeholder="Message subject"
+          >
+
+          <label for="message">
+            Your Message
+          </label>
+
+          <textarea
+            id="message"
+            name="message"
+            rows="6"
+            placeholder="Write your feedback or message here..."
+            required
+          ></textarea>
+
+          <input
+            type="hidden"
+            name="_subject"
+            value="New message from Sreebha Storybook"
+          >
+
+          <button
+            type="submit"
+            class="primary-button"
+          >
+            📩 Send Message
+          </button>
+
+        </form>
+
+      </div>
+
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+
+    <p>
+      © 2026 Sreebha Storybook. All rights reserved.
+    </p>
+
+    <p>
+      Created with love for little readers. ❤️
+    </p>
+
+  </footer>
+
+  <script src="script.js"></script>
+
 </body>
 </html>
