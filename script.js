@@ -6,77 +6,87 @@ const pages = Array.from(
 
 let current = 0;
 
-const img = document.getElementById('story-image');
-const count = document.getElementById('page-count');
-const dots = document.getElementById('page-dots');
-const prev = document.getElementById('prev');
-const next = document.getElementById('next');
+const img = document.getElementById("story-image");
+const count = document.getElementById("page-count");
+const dots = document.getElementById("page-dots");
+const prev = document.getElementById("prev");
+const next = document.getElementById("next");
 
 function render() {
   img.src = pages[current];
   img.alt = `The Unusual Wish story page ${current + 1}`;
 
-  count.textContent = `Page ${current + 1} of ${pages.length}`;
+  count.textContent =
+    `Page ${current + 1} of ${pages.length}`;
 
   prev.disabled = current === 0;
   next.disabled = current === pages.length - 1;
 
-  dots.querySelectorAll('button').forEach((b, i) => {
-    b.classList.toggle('active', i === current);
+  dots.querySelectorAll("button").forEach((button, i) => {
+    button.classList.toggle("active", i === current);
   });
 }
 
-// Create page buttons
 pages.forEach((_, i) => {
-  const b = document.createElement('button');
+  const button = document.createElement("button");
 
-  b.className = 'page-dot';
-  b.textContent = i + 1;
-  b.setAttribute('aria-label', `Open page ${i + 1}`);
+  button.className = "page-dot";
+  button.textContent = i + 1;
+  button.setAttribute(
+    "aria-label",
+    `Open page ${i + 1}`
+  );
 
-  b.addEventListener('click', () => {
+  button.addEventListener("click", () => {
     current = i;
     render();
   });
 
-  dots.appendChild(b);
+  dots.appendChild(button);
 });
 
-// Previous button
-prev.addEventListener('click', () => {
+prev.addEventListener("click", () => {
   if (current > 0) {
     current--;
     render();
   }
 });
 
-// Next button
-next.addEventListener('click', () => {
+next.addEventListener("click", () => {
   if (current < pages.length - 1) {
     current++;
     render();
   }
 });
 
-// Mobile menu
-const toggle = document.querySelector('.menu-toggle');
-const nav = document.getElementById('main-nav');
-
-toggle.addEventListener('click', () => {
-  const open = toggle.getAttribute('aria-expanded') === 'true';
-
-  toggle.setAttribute('aria-expanded', String(!open));
-  nav.style.display = open ? 'none' : 'flex';
-});
-
-nav.querySelectorAll('a').forEach(a => {
-  a.addEventListener('click', () => {
-    if (window.innerWidth <= 800) {
-      nav.style.display = 'none';
-      toggle.setAttribute('aria-expanded', 'false');
-    }
-  });
-});
-
-// Start storybook
 render();
+
+// Mobile menu
+const toggle = document.querySelector(".menu-toggle");
+const nav = document.getElementById("main-nav");
+
+if (toggle && nav) {
+  toggle.addEventListener("click", () => {
+    const open =
+      toggle.getAttribute("aria-expanded") === "true";
+
+    toggle.setAttribute(
+      "aria-expanded",
+      String(!open)
+    );
+
+    nav.style.display = open ? "none" : "flex";
+  });
+
+  nav.querySelectorAll("a").forEach((a) => {
+    a.addEventListener("click", () => {
+      if (window.innerWidth <= 800) {
+        nav.style.display = "none";
+        toggle.setAttribute(
+          "aria-expanded",
+          "false"
+        );
+      }
+    });
+  });
+}
